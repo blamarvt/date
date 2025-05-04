@@ -1,10 +1,48 @@
 {
   "expo": {
+    "userInterfaceStyle": "automatic",
     "scheme": "acme",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Brands.ttf",
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Regular.ttf",
+            "./node_modules/@react-native-vector-icons/fontawesome6/fonts/FontAwesome6_Solid.ttf"
+          ]
+        }
+      ]
     ],
     "name": "date",
-    "slug": "date"
+    "slug": "date",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7c25a91a-b99d-4b33-9106-16dae77b4561"
+      }
+    },
+    "ios": {
+      "userInterfaceStyle": "automatic",
+      "bundleIdentifier": "com.brian.lamar.date",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.brian.lamar.date",
+      "versionCode": 1,
+      "permissions": [],
+      "userInterfaceStyle": "automatic"
+    }
   }
 }
