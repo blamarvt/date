@@ -44,7 +44,19 @@
           "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "./assets/logo_full.png",
+          "dark": {
+            "image": "./assets/logo_full.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
     ],
     "name": "date",
     "slug": "date",
@@ -52,7 +64,8 @@
       "router": {},
       "eas": {
         "projectId": "7c25a91a-b99d-4b33-9106-16dae77b4561"
-      }
+      },
+      "supportsRTL": true
     },
     "ios": {
       "userInterfaceStyle": "automatic",

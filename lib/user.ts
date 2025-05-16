@@ -10,12 +10,8 @@ export interface UserProfileLocationState {
 }
 
 export interface UserDeviceState {
-  id: string;
-  name: string;
-  type: string;
   os: string;
   osVersion: string;
-  appVersion: string;
   languageCode: string;
 }
 
@@ -66,6 +62,6 @@ export const userSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { load, updateProfile } = userSlice.actions;
+export const { load, updateProfile, updateCurrentDevice } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -15,10 +15,12 @@ import { loginWithApple, loginWithGoogle } from "../lib/auth";
 import { faApple } from "@fortawesome/free-brands-svg-icons/faApple";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons/faGoogle";
 
+import i18n from "../lib/words";
+
 export default class LoginScreen extends React.Component {
   render() {
     const router = useRouter();
-    const logo = require("./assets/logo_heart.png");
+    const logo = require("../assets/logo_heart.png");
     const logoRatio = 100 / RNImage.resolveAssetSource(logo).height;
     const logoWidth = RNImage.resolveAssetSource(logo).width * logoRatio;
 
@@ -36,7 +38,7 @@ export default class LoginScreen extends React.Component {
 
           <Button
             icon={faApple}
-            title="Continue with Apple"
+            title={i18n.t("ctnWithApple")}
             onPress={() => {
               loginWithApple().then(() => {
                 console.log("Login with Apple successful");
@@ -47,7 +49,7 @@ export default class LoginScreen extends React.Component {
 
           <Button
             icon={faGoogle}
-            title="Continue with Google"
+            title={i18n.t("ctnWithGoogle")}
             onPress={() => {
               loginWithGoogle();
             }}
